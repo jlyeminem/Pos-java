@@ -1,8 +1,6 @@
 package goods;
 
-/**
- * Created by jly on 16-7-17.
- */
+//商品类,其属性为商品信息:名称，数量单位，单价，类别和条形码（伪）。
 public class Goods {
     private String barcode;
     private String name;
