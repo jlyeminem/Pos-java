@@ -8,7 +8,7 @@ public class NinetyFiveDiscountGoodsList {
     private static List<String> promotionBarcodes = new ArrayList<>();
 
     static {
-        promotionBarcodes.add("ITEM000003-"); //苹果
+        promotionBarcodes.add("ITEM000003-");  //苹果
 
     }
 
