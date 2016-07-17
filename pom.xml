@@ -78,8 +78,7 @@
                     <instrumentation>
 
                         <excludes>
-                            <exclude>Main.class</exclude>
-                            <exclude>Goods.class</exclude>
+                            <exclude>goods/Goods.class</exclude>
                         </excludes>
                     </instrumentation>
                 </configuration>
