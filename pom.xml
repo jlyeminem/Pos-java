@@ -79,6 +79,7 @@
 
                         <excludes>
                             <exclude>goods/Goods.class</exclude>
+                            <exclude>onsale/</exclude>
                         </excludes>
                     </instrumentation>
                 </configuration>
