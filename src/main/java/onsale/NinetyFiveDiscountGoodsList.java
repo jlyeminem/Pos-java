@@ -8,8 +8,23 @@ public class NinetyFiveDiscountGoodsList {
     private static List<String> promotionBarcodes = new ArrayList<>();
 
     static {
-        promotionBarcodes.add("ITEM000003-");  //苹果
+        promotionBarcodes.add("ITEM000003");  //苹果
+    }
 
+    public void addPromotionBarcode(String barcode) {
+        promotionBarcodes.add(barcode);
+    }
+
+    public void removePromotionBarcode(String barcode) {
+        if (promotionBarcodes.contains(barcode)) {
+            promotionBarcodes.remove(barcode);
+        } else {
+            throw new RuntimeException();
+        }
+    }
+
+    public void addAllPromotionBarcodes(List<String> barcodes) {
+        promotionBarcodes.addAll(barcodes);
     }
 
     public List<String> getPromotionBarcodes() {
