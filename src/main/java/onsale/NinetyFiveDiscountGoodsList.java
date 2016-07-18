@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 //享受95折促销的商品信息
-public class FiveDiscountGoodsList {
+public class NinetyFiveDiscountGoodsList {
     public static String type = "FIVE_PERCENT_DISCOUNT";
     private static List<String> promotionBarcodes = new ArrayList<>();
 
