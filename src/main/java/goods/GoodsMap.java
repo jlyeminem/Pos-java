@@ -13,7 +13,6 @@ public class GoodsMap {
         map.put("ITEM000003-",goods);
         goods = new Goods("ITEM000005","可口可乐","瓶",3.00,"饮料");
         map.put("ITEM000005",goods);
-
     }
 
     public static HashMap<String, Goods> getMap() {
