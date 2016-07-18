@@ -7,8 +7,7 @@ import java.util.List;
 
 //95折促销方式
 public class NinetyFiveDiscountPromotion extends Promotion {
-    NinetyFiveDiscountGoodsList promotionList = new NinetyFiveDiscountGoodsList();
-    List<String> promotionBarcodes = promotionList.getPromotionBarcodes();
+    List<String> promotionBarcodes = NinetyFiveDiscountGoodsList.getPromotionBarcodes();
 
     @Override
     double getPrice( Goods goods,int num) {

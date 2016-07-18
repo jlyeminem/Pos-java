@@ -13,6 +13,12 @@ public class GoodsMap {
         map.put("ITEM000003-",goods);
         goods = new Goods("ITEM000005","可口可乐","瓶",3.00,"饮料");
         map.put("ITEM000005",goods);
+        goods = new Goods("ITEM000000","篮球","个",100.00,"球类");
+        map.put("ITEM000000",goods);
+        goods = new Goods("ITEM000006","水杯","个",10.00,"生活用品");
+        map.put("ITEM000006",goods);
+        goods = new Goods("ITEM000002","雪碧","瓶",3.00,"饮料");
+        map.put("ITEM000002",goods);
     }
 
     public static HashMap<String, Goods> getMap() {

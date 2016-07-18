@@ -7,8 +7,7 @@ import java.util.List;
 
 //买二赠一促销方式
 public class BuyTwoGetOneFreePromotion extends Promotion {
-    BuyTwoGetOneFreeGoodsList promotionList = new BuyTwoGetOneFreeGoodsList();
-    List<String> promotionBarcodes = promotionList.getPromotionBarcodes();
+    List<String> promotionBarcodes = BuyTwoGetOneFreeGoodsList.getPromotionBarcodes();
 
     @Override
     double getPrice(Goods goods, int num) {
@@ -18,7 +17,6 @@ public class BuyTwoGetOneFreePromotion extends Promotion {
             num -= freeNum;
             price = num * goods.getPrice();
         }
-
         return getCouldPayPrice(price);    //买二赠一相当于买三个花二个的钱
     }
 }
