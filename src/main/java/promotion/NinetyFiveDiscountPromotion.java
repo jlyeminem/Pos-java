@@ -15,6 +15,7 @@ public class NinetyFiveDiscountPromotion extends Promotion {
         if (promotionBarcodes.contains(goods.getBarcode())) {
             price = num * 0.95 * goods.getPrice();
         }
+
         return getCouldPayPrice(price);
     }
 }
