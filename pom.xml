@@ -76,10 +76,10 @@
                         <format>xml</format>
                     </formats>
                     <instrumentation>
-
                         <excludes>
                             <exclude>goods/Goods.class</exclude>
                             <exclude>onsale/</exclude>
+                            <exclude>cart/Item.class</exclude>
                         </excludes>
                     </instrumentation>
                 </configuration>
