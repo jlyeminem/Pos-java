@@ -5,8 +5,8 @@
 #说明:
 
 ##cart
-   *CartItems 功能:
-   *Item      功能 :
+   *CartItems   购物车,存储用户购买的商品和数量Map<String,Integer>
+   *Item        购物车中的促销商品信息
 
 ##goods
    *Goods      商品类,其属性为商品信息:名称，数量单位，单价，类别和条形码（伪）。
