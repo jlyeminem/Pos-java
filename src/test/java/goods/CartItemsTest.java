@@ -37,7 +37,7 @@ public class CartItemsTest {
 
     @Test
     public void shouldOneItemMoreThanOneNum() throws Exception {
-        int num = cartItems.getCartItems().get("ITEM000003");
+        int num = cartItems.getCartItems().get("ITEM000003-");
         assertThat(num, is(2));
     }
 
