@@ -7,7 +7,8 @@ import java.util.List;
 
 //买二赠一促销方式
 public class BuyTwoGetOneFreePromotion extends Promotion {
-    List<String> promotionBarcodes = BuyTwoGetOneFreeGoodsList.getPromotionBarcodes();
+    BuyTwoGetOneFreeGoodsList promotionList = new BuyTwoGetOneFreeGoodsList();
+    List<String> promotionBarcodes = promotionList.getPromotionBarcodes();
 
     @Override
     double getPrice(Goods goods, int num) {

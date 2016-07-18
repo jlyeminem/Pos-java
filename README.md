@@ -15,9 +15,9 @@
    >GoodsMap   存储着商店的全部商品信息,可通过商品条形码查看商品的具体信息;实现方式(barcode,Goods)
 
 ###onsale:
-   >BuyTwoGetOneFreeGoodsList    存储着享受买二赠一促销的商品信息;实现方式(存放barcode的列表)
+   >BuyTwoGetOneFreeGoodsList    存储着享受买二赠一促销的商品信息,实现方式(存放barcode的列表);同时具有添加、删除优惠商品的功能
 
-   >NinetyFiveDiscountGoodsList  存储着享受95折促销的商品信息;实现方式(存放barcode的列表)
+   >NinetyFiveDiscountGoodsList  存储着享受95折促销的商品信息,实现方式(存放barcode的列表);;同时具有添加、删除优惠商品的功能
 
 ###promotion:
    >Promotion                    各类促销类的父类,方法有:计算促销后商品的价格;将价格的小数转化为2位
