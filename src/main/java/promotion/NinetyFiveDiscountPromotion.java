@@ -12,7 +12,7 @@ public class NinetyFiveDiscountPromotion extends Promotion {
     }
 
     @Override
-    public  double getPrice( Goods goods,int num) {
+    public double getPrice( Goods goods,int num) {
         double price = num * goods.getPrice();
         if (promotionList.contains(goods.getBarcode())) {
             price = num * 0.95 * goods.getPrice();

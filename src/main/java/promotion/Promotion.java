@@ -28,4 +28,6 @@ public abstract class Promotion {
     public boolean isContain(String barcode) {
         return promotionList.contains(barcode);
     }
+
+
 }

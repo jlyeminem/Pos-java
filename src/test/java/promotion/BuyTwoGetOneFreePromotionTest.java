@@ -24,6 +24,10 @@ public class BuyTwoGetOneFreePromotionTest {
 
     }
 
+    static double delta(double a,double b) {
+        return a-b;
+    }
+
     @Test
     public void shouldGetItemsFreeWhenTheNumberOfPromotionItemsIsMoreThanTwo() throws Exception {
         double price = promotion.getPrice(map.get("ITEM000001"),6);

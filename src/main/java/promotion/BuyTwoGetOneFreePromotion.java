@@ -21,6 +21,6 @@ public class BuyTwoGetOneFreePromotion extends Promotion {
             price = num * goods.getPrice();
         }
 
-        return getCouldPayPrice(price);    //买二赠一相当于买三个花二个的钱
+        return getCouldPayPrice(price);    //买二赠一相当于买三个花二个的钱,返回的是优惠的价格,当不享受该优惠时,则返回-1
     }
 }

@@ -47,7 +47,9 @@ public class Cart {
                 if (promotion.isContain(barcode)) {
                     type = promotion.getType();   //商品同时满足买二赠一和95折优惠,选择买二赠一
                     promotedPrice = promotion.getPrice(goods,num);
-                    break;
+                    if (promotedPrice != price) {
+                        break;
+                    }
                 }
             }
             Item item = new Item(type,barcode,num,price,promotedPrice);
@@ -59,9 +61,9 @@ public class Cart {
         return purchasedList;
     }
 
-    //根据cartMap中的商品信息进行打印,打印出用户的购买清单
+    //根据purchasedList中的商品信息进行打印,打印出用户的购买清单
     public String printShoppingList() {
-        StringBuilder sb = new StringBuilder("***<没钱赚商店>购物清单***");
+        StringBuilder sb = new StringBuilder("***<没钱赚商店>购物清单***/n");
         for (int i = 0;i < purchasedList.size();i++) {
             Item item = purchasedList.get(i);
             String barcode = item.getBarcode();
@@ -72,9 +74,51 @@ public class Cart {
             if (save > 0) {
                 sb.append(",节省:" + save + "(元)");
             }
+            sb.append("/n");
         }
+        sb.append("----------------------");
         return sb.toString();
-
     }
 
+    //根据purchasedList中的商品信息进行打印,打印出用户的购买商品中包含优惠商品的信息
+    public String printPromotionList(String type) {
+        StringBuilder sb = new StringBuilder();
+        int count = 0;
+        for (int i = 0;i < purchasedList.size();i++) {
+            Item item = purchasedList.get(i);
+            String barcode = item.getBarcode();
+            Goods goods = GoodsMap.getMap().get(barcode);
+            if (type.equals(item.getType()) && type.equals("BUY_TWO_GET_ONE_FREE")) {
+                count++;
+                if (count == 1) {
+                    sb.append("满二赠一商品:/n");
+                }
+                sb.append("名称:" + goods.getName() + "数量:" + (item.getNum() / 3) + goods.getUnit());
+                sb.append("/n");
+            }
+        }
+        if (count > 0) {
+            sb.append("----------------------");
+        }
+        return sb.toString();
+    }
+
+    //
+    public String printPayInf() {
+        double totalPay = 0.00;
+        double realPay = 0.00;
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0;i < purchasedList.size();i++) {
+            Item item = purchasedList.get(i);
+            totalPay += item.getPrice();
+            realPay += item.getPromotedPrice();
+        }
+        sb.append("总计:" + realPay + "(元)");
+        if (totalPay > realPay) {
+            sb.append("/n");
+            sb.append("节省:" + (totalPay - realPay) + "(元)");
+        }
+        sb.append("**********************");
+        return sb.toString();
+    }
 }
