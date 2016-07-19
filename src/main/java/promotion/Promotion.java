@@ -19,10 +19,6 @@ public abstract class Promotion {
         promotionList.add(barcode);
     }
 
-    public void deleteItemFromPromotion(String barcode) {
-        promotionList.remove(barcode);
-    }
-
     public abstract double getPrice(Goods goods, int num);
 
     public double getCouldPayPrice(double price) {

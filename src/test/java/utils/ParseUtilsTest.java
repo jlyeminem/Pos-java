@@ -32,4 +32,16 @@ public class ParseUtilsTest {
     public void shouldThrowExceptionWhenBarcodeIsIllegal() throws Exception {
         ParseUtils.parseBarcode("pos");            //pos不是有效地条形码
     }
+
+    @Test
+    public void shouldParseAppleBarcode() throws Exception {
+        String barcode = ParseUtils.parseItemBarcode("ITEM000003-2");
+        assertThat(barcode, is("ITEM000003-"));
+    }
+
+    @Test
+    public void shouldParseCocoBarcode() throws Exception {
+        String barcode = ParseUtils.parseItemBarcode("ITEM000005");
+        assertThat(barcode, is("ITEM000005"));
+    }
 }

@@ -25,9 +25,8 @@ public class OnSaleInf {
     }
 
     public void addPromotion(String barcode, String type) {
-        for (int i = 0; i < promotionList.size(); i++) {
-            Promotion promotion = promotionList.get(i);
-            if (promotion.getType() == type) {
+        for (Promotion promotion: promotionList) {
+            if (promotion.getType().equals(type)) {
                 promotion.addPromotionItem(barcode);
                 break;
             }

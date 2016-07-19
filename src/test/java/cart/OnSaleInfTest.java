@@ -11,11 +11,9 @@ import java.util.List;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.*;
 
-/**
- * Created by sunnior on 7/19/16.
- */
+
 public class OnSaleInfTest {
-    List<Promotion> promotionList;
+    private List<Promotion> promotionList;
     OnSaleInf onSaleInf = new OnSaleInf();
 
     @Before
@@ -24,6 +22,7 @@ public class OnSaleInfTest {
         onSaleInf.addPromotion("ITEM000003-","FIVE_PERCENT_DISCOUNT");
         onSaleInf.addPromotion("ITEM000005","BUY_TWO_GET_ONE_FREE");
         onSaleInf.addPromotion("ITEM000001","BUY_TWO_GET_ONE_FREE");
+        onSaleInf.addPromotion("ITEM000000","NO_PROMOTION");
     }
 
     @Test
