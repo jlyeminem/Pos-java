@@ -1,18 +1,20 @@
 package promotion;
 
 import goods.Goods;
-import onsale.NinetyFiveDiscountGoodsList;
 
 import java.util.List;
 
 //95折促销方式
 public class NinetyFiveDiscountPromotion extends Promotion {
-    List<String> promotionBarcodes = NinetyFiveDiscountGoodsList.getPromotionBarcodes();
+
+    public NinetyFiveDiscountPromotion() {
+        type = "FIVE_PERCENT_DISCOUNT";
+    }
 
     @Override
-    double getPrice( Goods goods,int num) {
+    public  double getPrice( Goods goods,int num) {
         double price = num * goods.getPrice();
-        if (promotionBarcodes.contains(goods.getBarcode())) {
+        if (promotionList.contains(goods.getBarcode())) {
             price = num * 0.95 * goods.getPrice();
         }
 

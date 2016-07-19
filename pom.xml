@@ -78,7 +78,7 @@
                     <instrumentation>
                         <excludes>
                             <exclude>goods/Goods.class</exclude>
-                            <exclude>onsale/</exclude>
+                            <exclude>cart/Cart.class</exclude>
                             <exclude>cart/Item.class</exclude>
                             <exclude>Posapp.class</exclude>
                         </excludes>

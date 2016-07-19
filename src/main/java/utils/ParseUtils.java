@@ -27,11 +27,16 @@ public class ParseUtils {
         }
     }
 
-    public static void parseItemNum(Map<String,Integer> map,int num,String barcode) {
+    public String parseItemBarcode(String barcode) {
         String str = barcode;
         if (barcode.contains("-")) {
             str = barcode.substring(0,barcode.indexOf("-") + 1);
         }
+        return str;
+    }
+
+    public void parseItemNum(Map<String,Integer> map,int num,String barcode) {
+        String str = parseItemBarcode(barcode);
         if (map.containsKey(str)) {
             num += map.get(str);
             map.replace(str,num);

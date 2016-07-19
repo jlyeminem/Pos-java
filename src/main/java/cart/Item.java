@@ -1,9 +1,9 @@
 package cart;
 
 public class Item {
-    private String type;
-    private String barcode;
-    private int num;
+    private String type;    //打折类型
+    private String barcode; //
+    private int num;        //数量
     private double price;
     private double promotedPrice;
 
@@ -19,39 +19,19 @@ public class Item {
         return type;
     }
 
-    public void setType(String type) {
-        this.type = type;
-    }
-
     public String getBarcode() {
         return barcode;
-    }
-
-    public void setBarcode(String barcode) {
-        this.barcode = barcode;
     }
 
     public int getNum() {
         return num;
     }
 
-    public void setNum(int num) {
-        this.num = num;
-    }
-
     public double getPrice() {
         return price;
     }
 
-    public void setPrice(double price) {
-        this.price = price;
-    }
-
     public double getPromotedPrice() {
         return promotedPrice;
-    }
-
-    public void setPromotedPrice(double promotedPrice) {
-        this.promotedPrice = promotedPrice;
     }
 }

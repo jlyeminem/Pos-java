@@ -2,6 +2,7 @@ package promotion;
 
 import goods.Goods;
 import goods.GoodsMap;
+import org.junit.Before;
 import org.junit.Test;
 
 import java.util.HashMap;
@@ -12,6 +13,12 @@ import static org.junit.Assert.*;
 public class NinetyFiveDiscountPromotionTest {
     NinetyFiveDiscountPromotion promotion = new NinetyFiveDiscountPromotion();
     HashMap<String, Goods> map = GoodsMap.getMap();
+
+    @Before
+    public void setUp() throws Exception {
+        promotion.addPromotionItem("ITEM000003-"); //苹果
+
+    }
 
     @Test
     public void shouldGetNinetyFiveDiscountWhenTheItemIsPromotion() throws Exception {

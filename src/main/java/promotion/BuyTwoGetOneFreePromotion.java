@@ -1,22 +1,26 @@
 package promotion;
 
 import goods.Goods;
-import onsale.BuyTwoGetOneFreeGoodsList;
 
+import java.util.ArrayList;
 import java.util.List;
 
 //买二赠一促销方式
 public class BuyTwoGetOneFreePromotion extends Promotion {
-    List<String> promotionBarcodes = BuyTwoGetOneFreeGoodsList.getPromotionBarcodes();
+
+    public BuyTwoGetOneFreePromotion() {
+        type = "BUY_TWO_GET_ONE_FREE";
+    }
 
     @Override
-    double getPrice(Goods goods, int num) {
+    public  double getPrice(Goods goods, int num) {
         double price = num * goods.getPrice();
-        if ( promotionBarcodes.contains(goods.getBarcode())) {
+        if ( promotionList.contains(goods.getBarcode())) {
             int freeNum = num / 3;
             num -= freeNum;
             price = num * goods.getPrice();
         }
+
         return getCouldPayPrice(price);    //买二赠一相当于买三个花二个的钱
     }
 }
