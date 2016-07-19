@@ -81,7 +81,6 @@
                             <exclude>cart/Cart.class</exclude>
                             <exclude>cart/Item.class</exclude>
                             <exclude>cart/Main.class</exclude>
-                            <exclude>cart/OnSaleInf.class</exclude>
                             <exclude>promotion/Promotion.class</exclude>
                             <exclude>PosApp.class</exclude>
                             <exclude>Main.class</exclude>

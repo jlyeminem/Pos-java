@@ -7,7 +7,6 @@ import promotion.Promotion;
 import java.util.ArrayList;
 import java.util.List;
 
-
 //相当于收银台的日常工作
 public class Main {
     public static void main(String[] args) {
