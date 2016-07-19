@@ -32,4 +32,13 @@ public class OnSaleInf {
             }
         }
     }
+
+    public void deletePromotion(String barcode, String type) {
+        for (Promotion promotion: promotionList) {
+            if (promotion.getType().equals(type)) {
+                promotion.deletePromotionItem(barcode);
+                break;
+            }
+        }
+    }
 }

@@ -29,5 +29,10 @@ public abstract class Promotion {
         return promotionList.contains(barcode);
     }
 
-
+    public void deletePromotionItem(String barcode) {
+        if (!promotionList.contains(barcode)) {
+            return;
+        }
+        promotionList.remove(barcode);
+    }
 }

@@ -56,9 +56,9 @@ public class Cart {
         }
     }
 
-    public List<Item> getPurchasedList() {
-        return purchasedList;
-    }
+//    public List<Item> getPurchasedList() {
+//        return purchasedList;
+//    }
 
     //根据purchasedList中的商品信息进行打印,打印出用户的购买清单
     public String printShoppingList() {
@@ -112,10 +112,10 @@ public class Cart {
             totalPay += item.getPrice();
             realPay += item.getPromotedPrice();
         }
-        sb.append("总计:" + realPay + "(元)");
+        sb.append("总计:" + realPay + "(元)\n");
+        double save = totalPay - realPay;
         if (totalPay > realPay) {
-            sb.append("/n");
-            sb.append("节省:" + (totalPay - realPay) + "(元)\n");
+            sb.append("节省:" + Double.parseDouble(String.format("%.2f",save)) + "(元)\n");
         }
         sb.append("**********************");
         return sb.toString();
