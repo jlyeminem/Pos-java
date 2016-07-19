@@ -6,6 +6,19 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.*;
 
 public class ParseUtilsTest {
+
+    @Test
+    public void shouldGetBarcodeWhenBarcodeWithACross() throws Exception {
+        String barcode = ParseUtils.parseItemBarcode("ITEM000003-3");
+        assertThat(barcode,is("ITEM000003-"));
+    }
+
+    @Test
+    public void shouldGetBarcodeWhenBarcodeWithoutACross() throws Exception {
+        String barcode = ParseUtils.parseItemBarcode("ITEM000001");
+        assertThat(barcode,is("ITEM000001"));
+    }
+
     @Test
     public void shouldGetOneItemWhenBarcodeIsLegal() throws Exception {
         int number = ParseUtils.parseBarcode("ITEM000001");
@@ -30,7 +43,7 @@ public class ParseUtilsTest {
 
     @Test(expected = Exception.class)
     public void shouldThrowExceptionWhenBarcodeIsIllegal() throws Exception {
-        ParseUtils.parseBarcode("pos");            //pos不是有效地条形码
+        ParseUtils.parseBarcode("pos");            //pos不是有效的条形码
     }
 
     @Test

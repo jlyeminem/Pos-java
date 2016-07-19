@@ -22,7 +22,7 @@ public class Cart {
         for (int i = 0; i < wantsToBuy.size(); i++) {
             String barcode = wantsToBuy.get(i);
             barcode = parseUtils.parseItemBarcode(barcode);
-            int num = ParseUtils.parseBarcode(barcode);
+            int num = parseUtils.parseBarcode(barcode);
             if (cartMap.containsKey(barcode)) {
                 num += cartMap.get(barcode);
                 cartMap.replace(barcode, num);
