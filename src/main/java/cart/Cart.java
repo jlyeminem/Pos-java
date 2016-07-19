@@ -56,10 +56,6 @@ public class Cart {
         }
     }
 
-//    public List<Item> getPurchasedList() {
-//        return purchasedList;
-//    }
-
     //根据purchasedList中的商品信息进行打印,打印出用户的购买清单
     public String printShoppingList() {
         StringBuilder sb = new StringBuilder("***<没钱赚商店>购物清单***\n");
@@ -71,7 +67,7 @@ public class Cart {
             sb.append("名称:" + goods.getName() + ",数量:" + item.getNum() + goods.getUnit()
                     + ",单价:" + goods.getPrice() + "(元),小计:" + item.getPromotedPrice() + "(元)");
             if (save > 0 && item.getType().equals("FIVE_PERCENT_DISCOUNT")) {
-                sb.append(",节省:" + save + "(元)");
+                sb.append(",节省:" + Double.parseDouble(String.format("%.2f",save)) + "(元)");
             }
             sb.append("\n");
         }

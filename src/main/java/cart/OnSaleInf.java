@@ -9,7 +9,7 @@ import java.util.List;
 
 //各类促销商品的信息
 public class OnSaleInf {
-    private  List<Promotion> promotionList = new ArrayList<>();
+    private List<Promotion> promotionList = new ArrayList<>();
 
     OnSaleInf() {
 
