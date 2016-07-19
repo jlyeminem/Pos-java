@@ -18,11 +18,10 @@ public class Cart {
 
     //根据购物车中的商品,将商品条形码和对应数目存放到cartMap
     Cart(List<String> wantsToBuy) {
-        ParseUtils parseUtils = new ParseUtils();
         for (int i = 0; i < wantsToBuy.size(); i++) {
             String barcode = wantsToBuy.get(i);
-            barcode = parseUtils.parseItemBarcode(barcode);
-            int num = parseUtils.parseBarcode(barcode);
+            barcode = ParseUtils.parseItemBarcode(barcode);
+            int num = ParseUtils.parseBarcode(wantsToBuy.get(i));
             if (cartMap.containsKey(barcode)) {
                 num += cartMap.get(barcode);
                 cartMap.replace(barcode, num);
@@ -63,7 +62,7 @@ public class Cart {
 
     //根据purchasedList中的商品信息进行打印,打印出用户的购买清单
     public String printShoppingList() {
-        StringBuilder sb = new StringBuilder("***<没钱赚商店>购物清单***/n");
+        StringBuilder sb = new StringBuilder("***<没钱赚商店>购物清单***\n");
         for (int i = 0;i < purchasedList.size();i++) {
             Item item = purchasedList.get(i);
             String barcode = item.getBarcode();
@@ -71,12 +70,12 @@ public class Cart {
             double save = item.getPrice() - item.getPromotedPrice();
             sb.append("名称:" + goods.getName() + ",数量:" + item.getNum() + goods.getUnit()
                     + ",单价:" + goods.getPrice() + "(元),小计:" + item.getPromotedPrice() + "(元)");
-            if (save > 0) {
+            if (save > 0 && item.getType().equals("FIVE_PERCENT_DISCOUNT")) {
                 sb.append(",节省:" + save + "(元)");
             }
-            sb.append("/n");
+            sb.append("\n");
         }
-        sb.append("----------------------");
+        sb.append("----------------------\n");
         return sb.toString();
     }
 
@@ -91,14 +90,14 @@ public class Cart {
             if (type.equals(item.getType()) && type.equals("BUY_TWO_GET_ONE_FREE")) {
                 count++;
                 if (count == 1) {
-                    sb.append("满二赠一商品:/n");
+                    sb.append("满二赠一商品:\n");
                 }
                 sb.append("名称:" + goods.getName() + "数量:" + (item.getNum() / 3) + goods.getUnit());
-                sb.append("/n");
+                sb.append("\n");
             }
         }
         if (count > 0) {
-            sb.append("----------------------");
+            sb.append("----------------------\n");
         }
         return sb.toString();
     }
@@ -116,7 +115,7 @@ public class Cart {
         sb.append("总计:" + realPay + "(元)");
         if (totalPay > realPay) {
             sb.append("/n");
-            sb.append("节省:" + (totalPay - realPay) + "(元)");
+            sb.append("节省:" + (totalPay - realPay) + "(元)\n");
         }
         sb.append("**********************");
         return sb.toString();

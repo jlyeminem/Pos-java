@@ -11,6 +11,7 @@ public class ParseUtilsTest {
     public void shouldGetBarcodeWhenBarcodeWithACross() throws Exception {
         String barcode = ParseUtils.parseItemBarcode("ITEM000003-3");
         assertThat(barcode,is("ITEM000003-"));
+        assertThat(ParseUtils.parseBarcode("ITEM000003-3"),is(3));
     }
 
     @Test
@@ -27,8 +28,8 @@ public class ParseUtilsTest {
 
     @Test
     public void shouldGetItemsWhenBarcodeWithACross() throws Exception {
-        int number = ParseUtils.parseBarcode("ITEM000003-3");
-        assertThat(number,is(3));
+        int number = ParseUtils.parseBarcode("ITEM000003-2");
+        assertThat(number,is(2));
     }
 
     @Test(expected = Exception.class)
