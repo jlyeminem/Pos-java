@@ -80,7 +80,7 @@
                             <exclude>goods/Goods.class</exclude>
                             <exclude>cart/Cart.class</exclude>
                             <exclude>cart/Item.class</exclude>
-                            <exclude>Main.class</exclude>
+                            <exclude>cart/Main.class</exclude>
                             <exclude>Posapp.class</exclude>
                         </excludes>
                     </instrumentation>
