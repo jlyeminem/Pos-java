@@ -15,7 +15,7 @@ public class Main {
         OnSaleInf onSaleInf = new OnSaleInf();
         onSaleInf.addPromotion("ITEM000001","BUY_TWO_GET_ONE_FREE");
         onSaleInf.addPromotion("ITEM000005","BUY_TWO_GET_ONE_FREE");
-        final List<Promotion> promotionList = onSaleInf.getPromotionList();;
+        final List<Promotion> promotionList = onSaleInf.getPromotionList();
 
         List<String> wantsToBuyList = new ArrayList<>();
         for (int i = 0;i < 5;i++) {

@@ -11,7 +11,7 @@ import java.util.List;
 public class OnSaleInf {
     private List<Promotion> promotionList = new ArrayList<>();
 
-    OnSaleInf() {
+    public OnSaleInf() {
 
         BuyTwoGetOneFreePromotion buyTwoGetOneFreePromotion = new BuyTwoGetOneFreePromotion();
         NinetyFiveDiscountPromotion ninetyFiveDiscountPromotion = new NinetyFiveDiscountPromotion();

@@ -83,7 +83,8 @@
                             <exclude>cart/Main.class</exclude>
                             <exclude>cart/OnSaleInf.class</exclude>
                             <exclude>promotion/Promotion.class</exclude>
-                            <exclude>Posapp.class</exclude>
+                            <exclude>PosApp.class</exclude>
+                            <exclude>Main.class</exclude>
                         </excludes>
                     </instrumentation>
                 </configuration>

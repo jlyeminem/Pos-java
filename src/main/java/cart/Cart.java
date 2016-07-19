@@ -17,7 +17,7 @@ public class Cart {
     List<Item> purchasedList = new ArrayList<>();
 
     //根据购物车中的商品,将商品条形码和对应数目存放到cartMap
-    Cart(List<String> wantsToBuy) {
+    public Cart(List<String> wantsToBuy) {
         for (int i = 0; i < wantsToBuy.size(); i++) {
             String barcode = wantsToBuy.get(i);
             barcode = ParseUtils.parseItemBarcode(barcode);
