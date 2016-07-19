@@ -55,17 +55,18 @@ public class Main {
         str2 += cart.printPayInf();
         System.out.println(str2);
 
-//        onSaleInf.deletePromotion("ITEM000001","BUY_TWO_GET_ONE_FREE");
-//        onSaleInf.deletePromotion("ITEM000005","BUY_TWO_GET_ONE_FREE");
-//        onSaleInf.addPromotion("ITEM000003-","FIVE_PERCENT_DISCOUNT");
-//        promotionList = onSaleInf.getPromotionList();
-//        cart = new Cart(wantsToBuyList);
-//        cart.formatItem(promotionList);
-//        String str3 = cart.printShoppingList();
-//        str3 += cart.printPromotionList("BUY_TWO_GET_ONE_FREE");
-//        str3 += cart.printPromotionList("FIVE_PERCENT_DISCOUNT");
-//        str3 += cart.printPayInf();
-//        System.out.println(str3);
+        onSaleInf.addPromotion("ITEM000001","BUY_TWO_GET_ONE_FREE");
+        onSaleInf.addPromotion("ITEM000005","BUY_TWO_GET_ONE_FREE");
+        onSaleInf.addPromotion("ITEM000003-","FIVE_PERCENT_DISCOUNT");
+        final List<Promotion> promotionList3 = onSaleInf.getPromotionList();
+        wantsToBuyList.add("ITEM000001");
+        cart = new Cart(wantsToBuyList);
+        cart.formatItem(promotionList3);
+        String str3 = cart.printShoppingList();
+        str3 += cart.printPromotionList("BUY_TWO_GET_ONE_FREE");
+        str3 += cart.printPromotionList("FIVE_PERCENT_DISCOUNT");
+        str3 += cart.printPayInf();
+        System.out.println(str3);
     }
 
 }
