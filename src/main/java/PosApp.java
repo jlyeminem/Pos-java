@@ -12,12 +12,6 @@ public class PosApp {
     private Cart cart;
     private List<String> barcodes;
 
-    public PosApp(List<String> barcodes,OnSaleInf onSaleInf) {
-        this.onSaleInf = onSaleInf;
-        this.barcodes = barcodes;
-        initData(barcodes);
-    }
-
     public PosApp(String jsonStr,OnSaleInf onSaleInf) {
         this.onSaleInf = onSaleInf;
         this.barcodes = JsonUtils.parseJsonString(jsonStr);
