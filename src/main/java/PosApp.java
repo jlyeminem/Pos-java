@@ -1,6 +1,7 @@
 import cart.Cart;
 import cart.OnSaleInf;
 import promotion.Promotion;
+import utils.JsonUtils;
 
 import java.util.List;
 
@@ -14,6 +15,12 @@ public class PosApp {
     public PosApp(List<String> barcodes,OnSaleInf onSaleInf) {
         this.onSaleInf = onSaleInf;
         this.barcodes = barcodes;
+        initData(barcodes);
+    }
+
+    public PosApp(String jsonStr,OnSaleInf onSaleInf) {
+        this.onSaleInf = onSaleInf;
+        this.barcodes = JsonUtils.parseJsonString(jsonStr);
         initData(barcodes);
     }
 
