@@ -5,7 +5,7 @@ import goods.Goods;
 import java.util.ArrayList;
 import java.util.List;
 
-//促销方式
+//促销方式,父类;除了getPrice外,其他函数都会被子类调用
 public abstract class Promotion {
 
     protected List<String> promotionList = new ArrayList<>();

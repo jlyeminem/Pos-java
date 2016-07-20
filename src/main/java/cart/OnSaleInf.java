@@ -7,7 +7,7 @@ import promotion.Promotion;
 import java.util.ArrayList;
 import java.util.List;
 
-//各类促销商品的信息
+//各类促销商品的信息,汇总在promotionList中
 public class OnSaleInf {
     private List<Promotion> promotionList = new ArrayList<>();
 
@@ -24,6 +24,7 @@ public class OnSaleInf {
         return promotionList;
     }
 
+    //添加促销商品,添加的时候需要说明商品条形码和促销方式
     public void addPromotion(String barcode, String type) {
         for (Promotion promotion: promotionList) {
             if (promotion.getType().equals(type)) {
@@ -33,6 +34,7 @@ public class OnSaleInf {
         }
     }
 
+    //删除促销商品,删除商品条形码为barcode、促销方式为type的促销信息
     public void deletePromotion(String barcode, String type) {
         for (Promotion promotion: promotionList) {
             if (promotion.getType().equals(type)) {

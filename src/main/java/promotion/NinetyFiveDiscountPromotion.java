@@ -18,6 +18,6 @@ public class NinetyFiveDiscountPromotion extends Promotion {
             price = num * 0.95 * goods.getPrice();
         }
 
-        return getCouldPayPrice(price);
+        return getCouldPayPrice(price);  //95折相当于在原价的基础上打5折,返回的是优惠的价格,当不享受该优惠时,则返回原价
     }
 }

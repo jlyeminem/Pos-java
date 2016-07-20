@@ -4,9 +4,8 @@ import promotion.Promotion;
 
 import java.util.List;
 
-/**
- * Created by jly on 16-7-19.
- */
+//封装;购物车由用户打算购买的商品和促销信息初始化,即PosApp.
+//getResult则打印商品的清单、促销信息、结账信息
 public class PosApp {
     private OnSaleInf onSaleInf;
     private Cart cart;
