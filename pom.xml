@@ -78,7 +78,6 @@
                     <instrumentation>
                         <excludes>
                             <exclude>goods/Goods</exclude>
-                            <exclude>goods/GoodsMap</exclude>
                             <exclude>cart/Item.class</exclude>
                             <exclude>promotion/Promotion.class</exclude>
                             <exclude>PosApp.class</exclude>

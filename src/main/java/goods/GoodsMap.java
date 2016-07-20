@@ -1,6 +1,7 @@
 package goods;
 
 import java.util.HashMap;
+import java.util.List;
 
 //map中存储着商店的全部商品信息,可通过商品条形码查看商品的具体信息
 public class GoodsMap {
@@ -23,5 +24,23 @@ public class GoodsMap {
 
     public static HashMap<String, Goods> getMap() {
         return goodsMap;
+    }
+
+    public static void addGoods(Goods goods) {
+        goodsMap.put(goods.getBarcode(),goods);
+    }
+
+    public static void removeGoods(String barcode) {
+        if (goodsMap.containsKey(barcode)) {
+            goodsMap.remove(barcode);
+        } else {
+            throw new RuntimeException();
+        }
+    }
+
+    public static void addAllGoods(List<Goods> goodsList) {
+        for (Goods goods:goodsList) {
+            goodsMap.put(goods.getBarcode(),goods);
+        }
     }
 }
