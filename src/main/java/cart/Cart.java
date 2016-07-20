@@ -81,7 +81,7 @@ public class Cart {
         return sb.toString();
     }
 
-    //根据purchasedList中的商品信息进行打印,打印出用户的购买商品中包含优惠商品的信息
+    //根据purchasedList中的商品信息进行打印,打印出用户的购买商品中包含优惠(买二赠一)商品的信息
     public String printPromotionList(String type) {
         StringBuilder sb = new StringBuilder();
         int count = 0;
@@ -92,7 +92,7 @@ public class Cart {
             if (type.equals(item.getType()) && type.equals("BUY_TWO_GET_ONE_FREE")) {
                 count++;
                 if (count == 1) {
-                    sb.append("满二赠一商品:\n");
+                    sb.append("买二赠一商品:\n");
                 }
                 sb.append("名称:" + goods.getName() + ",数量:" + (item.getNum() / 3) + goods.getUnit());
                 sb.append("\n");
@@ -120,7 +120,7 @@ public class Cart {
         if (totalPay > realPay) {
             sb.append("节省:" + df.format(save) + "(元)\n");
         }
-        sb.append("**********************");
+        sb.append("**********************\n");
         return sb.toString();
     }
 }

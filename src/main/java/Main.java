@@ -46,6 +46,7 @@ public class Main {
         //当购买的商品中,有符合"95"折优惠条件的商品,又有符合"买二赠一"优惠条件的商品时
         onSaleInf.addPromotion("ITEM000001","BUY_TWO_GET_ONE_FREE");
         onSaleInf.addPromotion("ITEM000005","BUY_TWO_GET_ONE_FREE");
+        onSaleInf.addPromotion("ITEM000005","FIVE_PERCENT_DISCOUNT");
         PosApp posApp3 = new PosApp(wantsToBuyList,onSaleInf);
         String str3 = posApp3.getResult();
         System.out.println(str3);
