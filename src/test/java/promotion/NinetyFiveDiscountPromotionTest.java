@@ -11,8 +11,8 @@ import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.*;
 
 public class NinetyFiveDiscountPromotionTest {
-    NinetyFiveDiscountPromotion promotion = new NinetyFiveDiscountPromotion();
-    HashMap<String, Goods> map = GoodsMap.getMap();
+    private NinetyFiveDiscountPromotion promotion = new NinetyFiveDiscountPromotion();
+    private HashMap<String, Goods> map = GoodsMap.getMap();
 
     @Before
     public void setUp() throws Exception {

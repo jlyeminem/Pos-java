@@ -6,9 +6,7 @@ import promotion.Promotion;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.*;
@@ -16,8 +14,8 @@ import static org.junit.Assert.*;
 public class CartTest {
     private List<String> wantsToBuyList = new ArrayList<>();
     private List<Item> purchasedList ;
-    Cart cart;
-    String shoppingList;
+    private Cart cart;
+    private String shoppingList;
 
     @Before
     public void setUp() throws Exception {
@@ -47,17 +45,17 @@ public class CartTest {
 
         for (int i = 0;i < purchasedList.size();i++) {
             Item item = purchasedList.get(i);
-            if (item.getBarcode()=="NO_PROMOTION" && item.getBarcode()=="ITEM000003-") {
+            if (item.getBarcode().equals("NO_PROMOTION") && item.getBarcode().equals("ITEM000003-")) {
                 assertThat(item.getNum(),is(2));
                 assertThat(item.getPrice(),is(11.00));
                 assertThat(item.getPromotedPrice(),is(11.00));
             }
-            if (item.getBarcode()=="BUY_TWO_GET_ONE_FREE" && item.getBarcode()=="ITEM000001") {
+            if (item.getBarcode().equals("BUY_TWO_GET_ONE_FREE") && item.getBarcode().equals("ITEM000001")) {
                 assertThat(item.getNum(),is(5));
                 assertThat(item.getPrice(),is(5.00));
                 assertThat(item.getPromotedPrice(),is(4.00));
             }
-            if (item.getBarcode()=="FIVE_PERCENT_DISCOUNT" && item.getBarcode()=="ITEM000005") {
+            if (item.getBarcode().equals("FIVE_PERCENT_DISCOUNT") && item.getBarcode().equals("ITEM000005")) {
                 assertThat(item.getNum(),is(3));
                 assertThat(item.getPrice(),is(9.00));
                 assertThat(item.getPromotedPrice(),is(8.55));

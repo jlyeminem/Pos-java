@@ -14,7 +14,7 @@ import static org.junit.Assert.*;
 
 public class OnSaleInfTest {
     private List<Promotion> promotionList;
-    OnSaleInf onSaleInf = new OnSaleInf();
+    private OnSaleInf onSaleInf = new OnSaleInf();
 
     @Before
     public void setUp() throws Exception {
