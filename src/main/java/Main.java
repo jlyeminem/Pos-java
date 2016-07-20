@@ -1,33 +1,14 @@
 import cart.OnSaleInf;
 
-import java.util.ArrayList;
-import java.util.List;
-
 //相当于超市收银机,包含4种实例
 public class Main {
     public static void main(String[] args) {
         //jsonString
-        String jsonStr = "[\n" +
-                "\n" +
-                "    'ITEM000001',\n" +
-                "\n" +
-                "    'ITEM000001',\n" +
-                "\n" +
-                "    'ITEM000001',\n" +
-                "\n" +
-                "    'ITEM000001',\n" +
-                "\n" +
-                "    'ITEM000001',\n" +
-                "\n" +
-                "    'ITEM000003-2',\n" +
-                "\n" +
-                "    'ITEM000005',\n" +
-                "\n" +
-                "    'ITEM000005',\n" +
-                "\n" +
-                "    'ITEM000005'\n" +
-                "\n" +
-                "]";
+        String jsonStr = "[\n" + "\n"
+                + "    'ITEM000001',\n" + "\n" + "    'ITEM000001',\n" + "\n"
+                + "    'ITEM000001',\n" + "\n" + "    'ITEM000001',\n" + "\n"
+                + "    'ITEM000001',\n" + "\n" + "    'ITEM000003-2',\n" + "\n" + "    'ITEM000005',\n" + "\n"
+                + "    'ITEM000005',\n" + "\n" + "    'ITEM000005'\n" + "\n" + "]";
 
         //test0当购买的商品中,有符合"买二赠一"优惠条件的商品时
         OnSaleInf onSaleInf = new OnSaleInf();
