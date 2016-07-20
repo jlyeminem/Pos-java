@@ -104,7 +104,7 @@ public class Cart {
         return sb.toString();
     }
 
-    //
+    //打印出支护金额和优惠金额(如果有的话)
     public String printPayInf() {
         DecimalFormat df   = new DecimalFormat("######0.00");
         double totalPay = 0.00;
