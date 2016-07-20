@@ -77,7 +77,7 @@
                     </formats>
                     <instrumentation>
                         <excludes>
-                            <exclude>goods/Goods.class</exclude>
+                            <exclude>goods</exclude>
                             <exclude>cart/Item.class</exclude>
                             <exclude>promotion/Promotion.class</exclude>
                             <exclude>PosApp.class</exclude>

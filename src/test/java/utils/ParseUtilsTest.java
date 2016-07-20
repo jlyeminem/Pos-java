@@ -18,12 +18,7 @@ public class ParseUtilsTest {
     public void shouldGetBarcodeWhenBarcodeWithoutACross() throws Exception {
         String barcode = ParseUtils.parseItemBarcode("ITEM000001");
         assertThat(barcode,is("ITEM000001"));
-    }
-
-    @Test
-    public void shouldGetOneItemWhenBarcodeIsLegal() throws Exception {
-        int number = ParseUtils.parseBarcode("ITEM000001");
-        assertThat(number, is(1));
+        assertThat(ParseUtils.parseBarcode("ITEM000001"),is(1));
     }
 
     @Test
@@ -57,5 +52,6 @@ public class ParseUtilsTest {
     public void shouldParseCocoBarcode() throws Exception {
         String barcode = ParseUtils.parseItemBarcode("ITEM000005");
         assertThat(barcode, is("ITEM000005"));
+        assertThat(ParseUtils.parseBarcode("ITEM000005"),is(1));
     }
 }
